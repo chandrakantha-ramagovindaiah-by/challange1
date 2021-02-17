@@ -1,0 +1,45 @@
+name: challange
+
+on: push
+
+jobs:
+    job1:
+        name: first job
+        runs-on: windows-latest
+        steps: 
+            - name: step one
+              uses: actions/checkout@v2
+            - name : step two
+              run: date /t
+
+    job2:
+        name: second job
+        runs-on: ubuntu-latest
+        steps:
+            - name: step one
+              uses: actions/checkout@v2
+            - name: step two
+              run: date
+
+    job3: 
+        name: third job
+        runs-on: macos-latest
+        steps: 
+            - name: step one
+              uses: actions/checkout@v2
+            - name: step two 
+              run: cal 2020
+
+    job4: 
+        name: depend
+        needs: [job1, job2, job3]
+        runs-on: windows-latest
+        steps:
+            - name: dep1
+              uses: actions/checkout@v2
+            - name: dep2
+              run: pwd
+
+   
+        
+            
