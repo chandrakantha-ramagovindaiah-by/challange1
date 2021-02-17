@@ -3,8 +3,7 @@ name: challange
 on: push
 
 jobs:
-    job1:
-        name: first job
+    windows:
         runs-on: windows-latest
         steps: 
             - name: step one
@@ -12,8 +11,7 @@ jobs:
             - name : step two
               run: date
 
-    job2:
-        name: second job
+    ubuntu:
         runs-on: ubuntu-latest
         steps:
             - name: step one
@@ -21,8 +19,7 @@ jobs:
             - name: step two
               run: date
 
-    job3: 
-        name: third job
+    macos:
         runs-on: macos-latest
         steps: 
             - name: step one
@@ -30,9 +27,9 @@ jobs:
             - name: step two 
               run: cal 2020
 
-    job4: 
+    Depend: 
         name: depend
-        needs: [job1, job2, job3]
+        needs: [windows, ubuntu, macos]
         runs-on: windows-latest
         steps:
             - name: dep1
