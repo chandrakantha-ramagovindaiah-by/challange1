@@ -10,7 +10,7 @@ jobs:
             - name: step one
               uses: actions/checkout@v2
             - name : step two
-              run: date /t
+              run: date
 
     job2:
         name: second job
