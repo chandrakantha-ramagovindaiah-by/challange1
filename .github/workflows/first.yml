@@ -43,7 +43,7 @@ jobs:
             - name: checkout the code
               uses: actions/checkout@v2
             - name : dos command
-            - run: mkdir testing
+              run: mkdir testing
    
         
             
