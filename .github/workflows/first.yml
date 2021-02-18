@@ -40,9 +40,7 @@ jobs:
         needs: Depend
         runs-on: windows-latest
         steps: 
-            - name: checkout the code
-              uses: actions/checkout@v2
-            - name : dos command
+            - name: dos command
               run: mkdir testing
    
         
