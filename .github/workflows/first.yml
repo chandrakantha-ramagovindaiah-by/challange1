@@ -38,9 +38,11 @@ jobs:
 
     complex: 
         needs: Depend
-        runs-on: windows
+        runs-on: windows-latest
         steps: 
-            - name: dos command
+            - name: checkout the code
+              uses: actions/checkout@v2
+            - name : dos command
             - run: mkdir testing
    
         
