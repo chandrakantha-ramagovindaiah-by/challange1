@@ -28,7 +28,6 @@ jobs:
               run: cal 2020
 
     Depend: 
-        name: depend
         needs: [windows, ubuntu, macos]
         runs-on: windows-latest
         steps:
@@ -37,6 +36,12 @@ jobs:
             - name: dep2
               run: pwd
 
+    complex: 
+        needs: Depend
+        runs-on: windows
+        steps: 
+            - name: dos command
+            - run: mkdir testing
    
         
             
